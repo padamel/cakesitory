@@ -5,12 +5,12 @@ Remote access to GitHub repository in Linux
  - log in to GitHub with the following options
     . GitHub credentials, or
     . Select one of the proposed third-party applications
- - in the top left side next to your profile photo, click the menu bar ![Alt text] (<img width="38" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/6b4a2f0a-1511-41bc-947a-586c5f87aa2d">
+ - in the top left side next to your profile photo, click the menu bar (<img width="38" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/6b4a2f0a-1511-41bc-947a-586c5f87aa2d">
 )
     . Select Home
 In the left panel of the Home page, click the green button to create a repository and begin configuring your repository by naming it, adding text in the description buffer (this is to tell other users what information is saved in the repository, and what they are used for). Two options are given to manage your repository, you can decide to leave it publicly or leave it private, it is up to you. you can add a README file to your repository now or later, there is no obligation (I prefer you use the git CLI to practice how to initialize a repository and add a file to it).
  - Create repository
-   ![alt text] (<img width="74" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/b8f1968b-f42b-43a1-9df0-5b5e539dc620">
+   (<img width="74" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/b8f1968b-f42b-43a1-9df0-5b5e539dc620">
 )
  - Scroll down and click the Create repository button
  - Login to your client server using your credentials and escalate to the privileged account (become a root user, identifiable with #)
