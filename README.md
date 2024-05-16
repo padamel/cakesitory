@@ -14,7 +14,8 @@ In the left panel of the Home page, click the green button to create a repositor
  - Login to your client server using your credentials and escalate to the privileged account (become a root user, identifiable with #)
  - return to the repository you just created and click the copy icon <img width="39" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/3f65a545-c958-4f2f-9974-6c9a1aa6e20e"> next to the repo URL, which is https://github.com/your_username/repo_name.git
     . As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember)
-      Cloning into 'cakesitory'...
+
+   Cloning into 'cakesitory'...
 warning: You appear to have cloned an empty repository.
   - Do the ls -al command to verify the successful cloning of the repository. Note that the .git directory shows to log in every git activity that occurs in the working repository
   - cd to move to the repository you cloned
