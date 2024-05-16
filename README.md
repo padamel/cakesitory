@@ -31,12 +31,17 @@ echo "# cakesitory" >> README.md
   - create a branch as an environment in which the repository contents will live
      # git branch -M main/dev/test
 Before pushing the change you made in the repository from the client-server and since GitHub no longer supports authentication with the password, it is recommended to use the Public Access Key to authenticate to get access to your data in GitHub.For a best practice and secure method of transferring data to the remote repository, you have options to generate a key pair. Either you use the key-gen command in Linux to generate a public/private key, store the private key on your local server then copy and store the public key on the GitHub security page, or you generate the key from the GitHub interface by following these steps
-  - In the top right angle, click the profile picture
+  - In the top right angle, click the profile picture <img width="42" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/625b8b4e-8a0e-422e-8c0e-4ccb74575cf5">
+
   - Scroll down, and in the left panel select <>Developer settings
   - Click on the down arrow next to Personal access tokens and select token (classic)
+    <img width="325" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/b0953e13-4b94-404e-a2cc-44da72761297">
+
   - Click Generate New Token button
   - Select Generate New Token (classic)
-  - In the Note buffer name the token or define what it is used for
+  - In the Note buffer, name the token or define what it is used for
+   <img width="321" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/1135becc-c6ec-4e64-8e89-b095ebd03ea1">
+
   - Under Expiration, select the period at which the token will remain valid until expiration
   - Under Scope, specify the type of access the token will authorize you to do.
        For this tutorial, we selected 2 scopes (users, and delete repo)
