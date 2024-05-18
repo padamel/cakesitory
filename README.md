@@ -1,7 +1,7 @@
 Remote access to GitHub repository in Linux
 
 # GitHub - an open-source registry very easy to browse, manage, and secure your account and repositories. It is a self-explanatory application for new beginners who create their first repository, it offers various security types to protect your repositories and contents, and it is out of monetary charge --doesn't require payment to create and maintain your account.
-# follow these steps to create and access your GitHub repository remotely
+# follow these steps to create and access your GitHub repository remotely/n
  - log in to GitHub with the following options
     . GitHub credentials, or
     . Select one of the proposed third-party applications
