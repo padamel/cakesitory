@@ -38,11 +38,11 @@ Before pushing the change you made in the repository from the client-server and 
   - Click Generate New Token button
   - Select Generate New Token (classic)
   - In the Note buffer, name the token or define what it is used for
-   <img width="321" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/1135becc-c6ec-4e64-8e89-b095ebd03ea1">
-  - Under Expiration, select the period at which the token will remain valid until expiration
-  - Under Scope, specify the type of access the token will authorize you to do.
+   <img width="321" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/1135becc-c6ec-4e64-8e89-b095ebd03ea1"> <br/>
+  - Under Expiration, select the period at which the token will remain valid until expiration <br/>
+  - Under Scope, specify the type of access the token will authorize you to do <br/>
        For this tutorial, we selected 2 scopes (users, and delete repo)
-  - Click Generate token button
+  - Click Generate token button <br/>
   - Return to the client-server and type this command line
      # git push -u origin main
        . Enter the username that corresponds to the one on your GitHub profile
