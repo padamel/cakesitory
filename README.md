@@ -5,7 +5,7 @@ Remote access to GitHub repository in Linux
  - log in to GitHub with the following options <br/>
     . GitHub credentials, or <br/>
     . Select one of the proposed third-party applications
- - in the top left side next to your profile photo, click the menu bar <img width="38" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/6b4a2f0a-1511-41bc-947a-586c5f87aa2d">
+ - in the top left side next to your profile photo, click the menu bar <img width="38" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/6b4a2f0a-1511-41bc-947a-586c5f87aa2d"> <br/>
     . Select Home
 In the left panel of the Home page, click the green button to create a repository and begin configuring your repository by naming it, adding text in the description buffer (this is to tell other users what information is saved in the repository, and what they are used for). Two options are given to manage your repository, you can decide to leave it publicly or leave it private, it is up to you. you can add a README file to your repository now or later, there is no obligation (I prefer you use the git CLI to practice how to initialize a repository and add a file to it).
  - Create repository
@@ -14,8 +14,7 @@ In the left panel of the Home page, click the green button to create a repositor
  - Login to your client server using your credentials and escalate to the privileged account (become a root user, identifiable with #)
  - return to the repository you just created and click the copy icon <img width="39" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/3f65a545-c958-4f2f-9974-6c9a1aa6e20e"> next to the repo URL, which is https://github.com/your_username/repo_name.git
     # git clone <copied_URL>
-    . As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember)
-
+    . As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember) <br/>
    Cloning into 'cakesitory'...
 warning: You appear to have cloned an empty repository.
   - Do the ls -al command to verify the successful cloning of the repository. Note that the .git directory shows to log in every git activity that occurs in the working repository
@@ -33,11 +32,9 @@ You can either go back to the repository page and copy the whole command line to
      # git branch -M main/dev/test
 Before pushing the change you made in the repository from the client-server and since GitHub no longer supports authentication with the password, it is recommended to use the Public Access Key to authenticate to get access to your data in GitHub.For a best practice and secure method of transferring data to the remote repository, you have options to generate a key pair. Either you use the key-gen command in Linux to generate a public/private key, store the private key on your local server then copy and store the public key on the GitHub security page, or you generate the key from the GitHub interface by following these steps
   - In the top right angle, click the profile picture <img width="42" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/625b8b4e-8a0e-422e-8c0e-4ccb74575cf5">
-
   - Scroll down, and in the left panel select <>Developer settings
   - Click on the down arrow next to Personal access tokens and select token (classic)
     <img width="325" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/b0953e13-4b94-404e-a2cc-44da72761297">
-
   - Click Generate New Token button
   - Select Generate New Token (classic)
   - In the Note buffer, name the token or define what it is used for
