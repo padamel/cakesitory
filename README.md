@@ -2,7 +2,7 @@ Remote access to GitHub repository in Linux
 
 #GitHub - an open-source registry very easy to browse, manage, and secure your account and repositories. It is a self-explanatory application for new beginners who create their first repository, it offers various security types to protect your repositories and contents, and it is out of monetary charge --doesn't require payment to create and maintain your account.
 # follow these steps to create and access your GitHub repository remotely
- - log in to GitHub with the following options
+ - log in to GitHub with the following options./n
     . GitHub credentials, or
     . Select one of the proposed third-party applications
  - in the top left side next to your profile photo, click the menu bar <img width="38" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/6b4a2f0a-1511-41bc-947a-586c5f87aa2d">
@@ -13,6 +13,7 @@ In the left panel of the Home page, click the green button to create a repositor
  - Scroll down and click the Create repository button
  - Login to your client server using your credentials and escalate to the privileged account (become a root user, identifiable with #)
  - return to the repository you just created and click the copy icon <img width="39" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/3f65a545-c958-4f2f-9974-6c9a1aa6e20e"> next to the repo URL, which is https://github.com/your_username/repo_name.git
+    # git clone <copied_URL>
     . As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember)
 
    Cloning into 'cakesitory'...
@@ -20,8 +21,8 @@ warning: You appear to have cloned an empty repository.
   - Do the ls -al command to verify the successful cloning of the repository. Note that the .git directory shows to log in every git activity that occurs in the working repository
   - cd to move to the repository you cloned
 You can either go back to the repository page and copy the whole command line to add a README file, create a branch, and push the committed change to your remote repository, or for training purposes and a better understanding of what git CLI does, I prefer to type each git CLI manually
-  - append README.md file with the echo cmd, this is creating the file in the server system
-echo "# cakesitory" >> README.md 
+  - append README.md file with the echo cmd, this is creating the file in the working directory
+     # echo "# cakesitory" >> README.md 
   - Initialize your repo
      # git init
   - Add README.md to the repo, but not yet visible on the GitHub interface
