@@ -14,7 +14,7 @@ In the left panel of the Home page, click the green button to create a repositor
  - Login to your client server using your credentials and escalate to the privileged account (become a root user, identifiable with #)
  - return to the repository you just created and click the copy icon <img width="39" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/3f65a545-c958-4f2f-9974-6c9a1aa6e20e"> next to the repo URL, which is https://github.com/your_username/repo_name.git
     # git clone <copied_URL>
-    . As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember) <br/>
+As a result, you will read this message after downloading the remote repo to your local machine (Note: clone the repository into the working directory easy to remember) <br/>
    Cloning into 'cakesitory'...
 warning: You appear to have cloned an empty repository.
   - Do the ls -al command to verify the successful cloning of the repository. Note that the .git directory shows to log in every git activity that occurs in the working repository
@@ -39,7 +39,6 @@ Before pushing the change you made in the repository from the client-server and 
   - Select Generate New Token (classic)
   - In the Note buffer, name the token or define what it is used for
    <img width="321" alt="image" src="https://github.com/padamel/cakesitory/assets/82719248/1135becc-c6ec-4e64-8e89-b095ebd03ea1">
-
   - Under Expiration, select the period at which the token will remain valid until expiration
   - Under Scope, specify the type of access the token will authorize you to do.
        For this tutorial, we selected 2 scopes (users, and delete repo)
