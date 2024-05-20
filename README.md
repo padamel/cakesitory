@@ -42,10 +42,10 @@ Before pushing the change you made in the repository from the client-server and 
   - Under Expiration, select the period at which the token will remain valid until expiration <br/>
   - Under Scope, specify the type of access the token will authorize you to do <br/>
        For this tutorial, we selected 2 scopes (users, and delete repo)
-  - Click Generate token button <br/>
+  - Click #Generate token button <br/>
   - Return to the client-server and type this command line
-     # git push -u origin main
-       . Enter the username that corresponds to the one on your GitHub profile
+     # git push -u origin main <br/>
+       . Enter the username that corresponds to the one on your GitHub profile <br/>
        . Copy and paste the token you generated, it helps connect to your remote repository through the OAuth security protocol.
   - Refresh your browser and notice that your repository is created with empty file
 As a result, the command returns the information below: the number of objects stored in your repo, the branch in which your repo lives, etc.
