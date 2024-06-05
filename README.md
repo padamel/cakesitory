@@ -3,9 +3,9 @@ Pre Requisite
 Jenkins is an open-source automation software than runs when OpenJDK (Java) is installed on the host server. Prior to install Jenkins, you must do the following tasks:
 
 # Run system update
-> apt update -y \n
+> apt update -y,
 If some packages need to be update to enhance system performance, do
-> apt list --upgradable \n
+> apt list --upgradable,
 > apt upgrade -y
 # Install Java code on the sever
 Go to the Jenkins webpage at https://www.jenkins.io/doc/, under the User Handbook
