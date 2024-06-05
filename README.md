@@ -9,21 +9,21 @@ apt list --upgradable
 apt upgrade -y
 # Install Java code on the sever
 Go to the Jenkins webpage at https://www.jenkins.io/doc/, under the User Handbook
-- select Platform Information
-- Java Support Policy
-The list of all the Java versions that run the Jenkins system is displayed 
-Return to the host server, check if the Java version is already installed. If not, choose the most recent version to install
-java -version 
-You will read the Java versions that support the Jenkins system
+- Select Platform Information
+- Click Java Support Policy
+The list of Java versions that run the Jenkins system display. Return to the host server and check if the Java version is already installed. Run,
+java -version
+If not, choose from the command output the most recent version to install that supports the Jenkins process
 apt install openjdk-17-jre-headless -y (verify the Java version that you installed)
+
 # Install Jenkins
 Go back to the Jenkins website, under the User Handbook, 
-- select Installing Jenkins
-- Linux
-- Scroll down and under Long Term Support release, copy one command at a time instead of copying the whole paragraph
-Before do run the command below to Jenkins is already running or not
+- Select Installing Jenkins
+- Select Linux
+- Scroll down and under Long Term Support release, copy one command at a time instead of copying the whole paragraph to ensure that your internal system and the remote application are successfully connected and all packages are infallibly installed
+Before, run the command below to verify the status of Jenkins
 systemctl status jenkins
-Add Jenkins repository to the server
+Then, add Jenkins repository to the server
 wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
   
