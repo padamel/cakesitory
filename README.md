@@ -3,10 +3,10 @@ Pre Requisite
 Jenkins is an open-source automation software than runs when OpenJDK (Java) is installed on the host server. Prior to install Jenkins, you must do the following tasks:
 
 # Run system update
-apt update -y
+> apt update -y
 If some packages need to be update to enhance system performance, do
-apt list --upgradable
-apt upgrade -y
+> apt list --upgradable
+> apt upgrade -y
 # Install Java code on the sever
 Go to the Jenkins webpage at https://www.jenkins.io/doc/, under the User Handbook
 - Select Platform Information
@@ -14,7 +14,7 @@ Go to the Jenkins webpage at https://www.jenkins.io/doc/, under the User Handboo
 The list of Java versions that run the Jenkins system display. Return to the host server and check if the Java version is already installed. Run,
 java -version
 If not, choose from the command output the most recent version to install that supports the Jenkins process
-apt install openjdk-17-jre-headless -y (verify the Java version that you installed)
+> apt install openjdk-17-jre-headless -y (verify the Java version that you installed)
 
 # Install Jenkins
 Go back to the Jenkins website, under the User Handbook, 
@@ -24,23 +24,24 @@ Go back to the Jenkins website, under the User Handbook,
 Before, run the command below to verify the status of Jenkins
 systemctl status jenkins
 Then, add Jenkins repository to the server
-wget -O /usr/share/keyrings/jenkins-keyring.asc \
+
+> wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
   
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+> echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 
-apt update -y
-apt install jenkins -y
+> apt update -y
+> apt install jenkins -y
 
 After installing the open-source integration tool, do this
-systemctl start jenkins
-systemctl enable jenkins
+> systemctl start jenkins
+> systemctl enable jenkins
 
 Jenkins runs with the default firewall on port 8080 which allows all traffic, so adjust and enable traffic with
-ufw allow 8080
-ufw enable 
+> ufw allow 8080
+> ufw enable 
 
 Access Jenkins on your web browser like Chrome
 http://your_server_ip_or_domain:8080
