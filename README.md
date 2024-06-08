@@ -16,7 +16,7 @@ Go to the Jenkins webpage at https://www.jenkins.io/doc/, under the User Handboo
 The list of Java versions that run the Jenkins system display. Return to the host server and check if the Java version is already installed. Run,
 java -version
 If not, choose from the command output the most recent version to install that supports the Jenkins process
-> apt install openjdk-17-jre-headless -y (verify the Java version that you installed)
+> apt install openjdk-11-jre-headless -y (verify the Java version that you installed)
 
 # Install Jenkins
 Go back to the Jenkins website, under the User Handbook, 
