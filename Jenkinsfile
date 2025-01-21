@@ -12,7 +12,7 @@ pipeline {
         stage('Test'){
             steps {
                 sh 'mv template template/'
-                junit 
+                junit 'reports/**/*.xml'
             }
         }
         stage('Deploy') {
