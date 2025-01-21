@@ -2,19 +2,7 @@ FROM tomcat:9.0.98
 
 MAINTAINER "Armel"; "armeldjongo@outlook.com"
 
-COPY check_java.sh /usr/local/bin
-
-RUN echo "verify if wget is isntalled" && \
-
-if [command -v wget &> /dev/null]; then \
-
-        echo "wget is installed"; \
-
-else \
-
-        apt-get update && apt-get install -y wget; \
-
-fi
+COPY index.html /var/lib/tomcat:9.0.98/webapps/ROOT/
 
 # Check if Java is installed by checking the command's existence
 
@@ -40,7 +28,7 @@ else\
 
         echo "Installing Java..."\
 
-        apt update && sudo apt install default-jdk -y\
+        apt update && sudo apt install openjdk-17-jdk -y\
 
         echo "Java has been installed."\
 
@@ -54,6 +42,6 @@ fi > /usr/local/bin/check_java.sh && chmod +x /usr/local/bin/check_java.sh && /b
 
 EXPOSE 8080
 
-CMD [run, check_java.sh]
+CMD [run] 
 
 

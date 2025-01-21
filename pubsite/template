@@ -1,0 +1,38 @@
+celeb-app/
+├── src/
+│   └── main/
+│       ├── java/
+│       └── webapp/
+│           └── WEB-INF/
+│               └── web.xml
+└── pom.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
