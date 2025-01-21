@@ -12,7 +12,7 @@ pipeline {
         stage('Test'){
             steps {
                 sh 'make check'
-                junit 'cd /template'
+                junit 'mv template /template'
             }
         }
         stage('Deploy') {
