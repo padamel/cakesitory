@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'mv template appbase/'
+                sh 'touch appbase/file1'
             }
         }
         stage('Deploy') {
