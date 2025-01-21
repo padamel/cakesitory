@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'mv template template/'
+                sh 'touch file1'
                 junit 'reports/**/*.xml'
             }
         }
