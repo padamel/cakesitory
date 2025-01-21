@@ -1,37 +1,40 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
+    
     stages {
         stage('Check Directory') {
             steps {
                 script {
                     if (fileExists('appservice')) {
-                        echo "Directory exists, proceeding with build"
+                        echo "Directory 'appservice' exists. Proceeding with pipeline."
                     } else {
-                        error "Required directory does not exist. Aborting build."
+                        error "Directory 'target_directory' does not exist. Aborting pipeline."
                     }
                 }
             }
         }
+        
         stage('Build') {
             steps {
                 sh 'mkdir appservice'
             }
         }
-        stage('Test'){
+        
+        stage('Test') {
             steps {
                 sh 'touch file1'
             }
         }
+        
         stage('Deploy') {
             steps {
-                sh 'echo "file added"'
+                echo "file1 added"
             }
         }
     }
 }
+
+
 
 
 
