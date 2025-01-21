@@ -6,7 +6,7 @@ pipeline {
     stage('Check Directory') {
     steps {
         script {
-            if (fileExists('path/to/your/directory')) {
+            if (fileExists('appservice')) {
                 echo "Directory exists, proceeding with build"
             } else {
                 error "Required directory does not exist. Aborting build."
