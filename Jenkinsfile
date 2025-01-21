@@ -6,7 +6,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'rm -r template'
                 sh 'mkdir appbase'
             }
         }
