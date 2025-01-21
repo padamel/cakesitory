@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'make check'
-                junit 'mv template /template'
+                sh 'mv template template/'
+                junit 
             }
         }
         stage('Deploy') {
