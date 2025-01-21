@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'touch file1'
+                sh ''
                 junit 'reports/**/*.xml'
             }
         }
