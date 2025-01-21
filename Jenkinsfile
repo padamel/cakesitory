@@ -3,7 +3,7 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
-    stages { 
+    stages {
         stage('Check Directory') {
             steps {
                 script {
@@ -15,26 +15,23 @@ pipeline {
                 }
             }
         }
+        stage('Build') {
+            steps {
+                sh 'mkdir appservice'
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'touch file1'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo "file added"'
+            }
+        }
     }
-
-       stages {
-           stage('Build') {
-               steps {
-                   sh 'mkdir appservice'
-               }
-           }
-           stage('Test'){
-               steps {
-                   sh 'touch file1'
-               }
-           }
-           stage('Deploy') {
-               steps {
-                   sh 'echo "file added"' //
-               }
-           }
-       }
-} 
+}
 
 
 
