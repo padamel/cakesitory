@@ -7,12 +7,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'rm -r template'
+                sh 'mkdir appbase'
             }
         }
         stage('Test'){
             steps {
-                sh ''
-                junit 'reports/**/*.xml'
+                sh 'mv template appbase/'
             }
         }
         stage('Deploy') {
