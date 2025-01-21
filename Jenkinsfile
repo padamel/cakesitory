@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'build'
+                sh 'mkdir template'
             }
         }
         stage('Test'){
             steps {
                 sh 'make check'
-                junit 'mkdir template'
+                junit 'cd /template'
             }
         }
         stage('Deploy') {
