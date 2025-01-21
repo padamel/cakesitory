@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir appbase'
+                sh 'mkdir appservice'
             }
         }
         stage('Test'){
             steps {
-                sh 'touch appbase/file1'
+                sh 'touch file1'
             }
         }
         stage('Deploy') {
