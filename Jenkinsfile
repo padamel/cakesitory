@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mkdir template'
+                sh 'rm -r template'
             }
         }
         stage('Test'){
