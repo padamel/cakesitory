@@ -33,23 +33,26 @@ pipeline {
                 echo "file1 added"
             }
         }
-        stage('RUN Container')
+        stage('Run Container') {
             steps {
                 script {
-                    sh 'docker run -d -p 8080:8080 thankyouword' 
-                    echo "container started on port 8080"
+                    // Assuming you're using Docker. Replace 'your-image-name' with your actual image name
+                    sh 'docker run -d -p 8080:8080 thankyouword'
+                    echo "Container started on port 8080"
                 }
             }
         }
     }
+    
     post {
         always {
             script {
                 currentBuild.result = currentBuild.result ?: 'SUCCESS'
-                }
             }
         }
     }
+}
+
 
 
 
