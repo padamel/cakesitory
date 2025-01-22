@@ -14,6 +14,19 @@ pipeline {
             }
         }
         
+        stage('Subsequent Stage') {
+            steps {
+                    echo "This stage will only run if the directory exists."
+                }
+            }
+        }
+            post {
+                always {
+                    script {
+                        currentBuild.result = currentBuild.result ?: 'SUCCESS'
+                    }
+                }
+        }
         stage('Build') {
             steps {
                 sh 'mkdir appservice'
