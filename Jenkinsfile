@@ -33,6 +33,14 @@ pipeline {
                 echo "file1 added"
             }
         }
+        stage('RUN Container')
+            steps {
+                script {
+                    sh 'docker run -d -p 8080:8080 thankyouword' 
+                    echo "container started on port 8080"
+                }
+            }
+        }
     }
     
     post {
