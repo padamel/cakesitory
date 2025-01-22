@@ -41,10 +41,11 @@ pipeline {
                 }
             }
         }
-        post {
-            always {
-                script {
-                    currentBuild.result = currentBuild.result ?: 'SUCCESS'
+    }
+    post {
+        always {
+            script {
+                currentBuild.result = currentBuild.result ?: 'SUCCESS'
                 }
             }
         }
