@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     if (fileExists('appservice')) {
-                        echo "Directory 'appservice' exists. Proceeding with pipeline."
+                        echo "Directory 'appservice' exists. Return code 0."
                     } else {
                         error "Directory 'target_directory' does not exist. Aborting pipeline."
                     }
