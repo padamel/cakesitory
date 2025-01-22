@@ -13,7 +13,6 @@ pipeline {
                 }
             }
         }
-        
         stage('Subsequent Stage') {
             steps {
                     echo "This stage will only run if the directory exists."
@@ -32,13 +31,11 @@ pipeline {
                 sh 'mkdir appservice'
             }
         }
-        
         stage('Test') {
             steps {
                 sh 'touch file1'
             }
         }
-        
         stage('Deploy') {
             steps {
                 echo "file1 added"
