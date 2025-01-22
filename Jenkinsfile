@@ -33,16 +33,19 @@ pipeline {
                 echo "file1 added"
             }
         }
-    }
-    
-    post {
-        always {
-            script {
-                currentBuild.result = currentBuild.result ?: 'SUCCESS'
+        stage('check out') {
+            steps {
+            }
+        }
+        post {
+            always {
+                script {
+                    currentBuild.result = currentBuild.result ?: 'SUCCESS'
+                }
             }
         }
     }
-}
+}    
 
 
 
