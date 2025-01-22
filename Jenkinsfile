@@ -21,7 +21,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mkdir -p appservice'
-                sh 'docker pull armel2025/thankyouword'
             }
         }
         stage('Test') {
