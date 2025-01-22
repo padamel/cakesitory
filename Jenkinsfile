@@ -34,9 +34,9 @@ pipeline {
             }
         }
         post {
-            always {
-                 script {
-                    currentBuild.result = currentBuild.result ?: 'SUCCESS'
+          always {
+              script {
+                  currentBuild.result = currentBuild.result ?: 'SUCCESS'
             }
         }
     }
