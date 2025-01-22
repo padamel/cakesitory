@@ -8,43 +8,41 @@ pipeline {
                     if (fileExists('appservice')) {
                         echo "Directory 'appservice' exists. Return code 0."
                     } else {
-                        error "Directory 'target_directory' does not exist. Aborting pipeline."
+                        error "Directory 'appservice' does not exist. Aborting pipeline."
                     }
                 }
             }
         }
         stage('Subsequent Stage') {
             steps {
-                    echo "This stage will only run if the directory exists."
-                }
+                echo "This stage will only run if the directory exists."
             }
         }
-            post {
-                always {
-                    script {
-                        currentBuild.result = currentBuild.result ?: 'SUCCESS'
-                    }
-                }
-            }
-        
-            stage('Build') {
-                steps {
-                    sh 'mkdir appservice'
-                }
-            }
-        
-            stage('Test') {
-                steps {
-                    sh 'touch file1'
-                }
-            }
-        
-            stage('Deploy') {
-                steps {
-                    echo "file1 added"
-                }
+        stage('Build') {
+            steps {
+                sh 'mkdir -p appservice'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'touch file1'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "file1 added"
+            }
+        }
+    }
+    
+    post {
+        always {
+            script {
+                currentBuild.result = currentBuild.result ?: 'SUCCESS'
+            }
+        }
+    }
+}
 
 
 
