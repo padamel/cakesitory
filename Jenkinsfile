@@ -25,24 +25,26 @@ pipeline {
                         currentBuild.result = currentBuild.result ?: 'SUCCESS'
                     }
                 }
-        }
-        stage('Build') {
-            steps {
-                sh 'mkdir appservice'
+            }
+        
+            stage('Build') {
+                steps {
+                    sh 'mkdir appservice'
+                }
+            }
+        
+            stage('Test') {
+                steps {
+                    sh 'touch file1'
+                }
+            }
+        
+            stage('Deploy') {
+                steps {
+                    echo "file1 added"
+                }
             }
         }
-        stage('Test') {
-            steps {
-                sh 'touch file1'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "file1 added"
-            }
-        }
-    }
-}
 
 
 
