@@ -33,17 +33,6 @@ pipeline {
                 echo "file1 added"
             }
         }
-        stage('Run Container') {
-            steps {
-                script {
-                    // Assuming you're using Docker. Replace 'your-image-name' with your actual image name
-                    sh 'docker tag thankyouword armel2025/tom-thankyouword'
-                       'docker push armel2025/tom-thankyouword'
-                       'docker images'                    
-                    echo "Container started on port 8080"
-                }
-            }
-        }
     }
     
     post {
