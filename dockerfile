@@ -40,7 +40,7 @@ else\
 
 fi > /usr/local/bin/check_java.sh && chmod +x /usr/local/bin/check_java.sh && /bin/bash -c '/usr/local/bin/check_java.sh'
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD [run] 
 
