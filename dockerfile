@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 MAINTAINER "Armel"; "armeldjongo@outlook.com"
 
-COPY index.html /var/lib/tomcat:9.0.98/webapps/ROOT/
+COPY index.html /var/lib/tomcat:latest/webapps/ROOT/
 
 # Check if Java is installed by checking the command's existence
 
