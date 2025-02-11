@@ -1,27 +1,52 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
+    
     stages {
-        stage('Build') {
+        stage('Check Directory') {
             steps {
-                sh 'build'
+                script {
+                    if (fileExists('appservice')) {
+                        echo "Directory 'appservice' exists. Return code 0."
+                    } else {
+                        error "Directory 'appservice' does not exist. Aborting pipeline."
+                    }
+                }
             }
         }
-        stage('Test'){
+        stage('Subsequent Stage') {
             steps {
-                sh 'make check'
-                junit 'mkdir template'
+                echo "This stage will only run if the directory exists."
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mkdir -p appservice'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'touch file1'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'deploy' //
+                echo "file1 added"
+            }
+        }
+    }
+    
+    post {
+        always {
+            script {
+                currentBuild.result = currentBuild.result ?: 'SUCCESS'
             }
         }
     }
 }
+   
+
+
+
 
 
 
