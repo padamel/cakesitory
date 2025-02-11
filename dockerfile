@@ -1,4 +1,4 @@
-FROM tomcat:9.0.98
+FROM tomcat:latest
 
 MAINTAINER "Armel"; "armeldjongo@outlook.com"
 
