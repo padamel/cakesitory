@@ -42,6 +42,8 @@ fi > /usr/local/bin/check_java.sh && chmod +x /usr/local/bin/check_java.sh && /b
 
 EXPOSE 8080
 
-CMD [run] 
+# start tomcat
+
+CMD ["catalina.sh" "run"] 
 
 
